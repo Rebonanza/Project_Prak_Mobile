@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'screens/screens.dart';
 void main() {
   runApp(NewsReaderApp());
 }
@@ -10,8 +10,17 @@ class NewsReaderApp extends StatelessWidget {
     return MaterialApp(
       title: 'News Reader',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.grey,
       ),
+      initialRoute: '/',
+      routes:{
+        HomeScreen.routeName: (context) => const HomeScreen(),
+        DiscoverScreen.routeName: (context) => const DiscoverScreen(),
+        LoginScreen.routeName: (context) => const LoginScreen(),
+        LoginScreen.routeName: (context) => const LoginScreen(),
+        NewsScreen.routeName : (context) => const NewsScreen(),
+        ProfileScreen.routeName : (context) => const ProfileScreen()
+      },
       home: NewsReaderHomePage(),
     );
   }
